@@ -1,0 +1,99 @@
+$DarkColor: #333;
+$LightColor: #FAFAFA;
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+body {
+    background-color: $LightColor;
+    color: $DarkColor;
+    font-family: 'Inter';
+}
+
+
+
+#container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#navbar-slide {
+    background-color: #FFF;
+
+    .menu {
+        display: none;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        background-color: #FFF;
+
+        li {
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+
+            &:hover {
+                color: BLUE;
+            }
+
+        }
+
+
+    }
+}
+
+#content {
+    margin-left: 20%;
+    padding: 20px;
+    height: auto;
+}
+
+@media screen and (max-width: 800px) {
+    #navbar-slide {
+        ul {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            a {
+                float: left;
+                padding: 15px;
+            }
+        }
+    }
+
+    #content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #navbar-slide {
+
+        .menu {
+            display: inline;
+        }
+
+        ul {
+            display: none;
+
+            a {
+                text-align: center;
+                float: none;
+            }
+        }
+    }
+
+}
